@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery</title>
+    <script>
+        // Save scroll position before page unloads
+        window.addEventListener('beforeunload', function() {
+            localStorage.setItem('scrollPosition', window.scrollY);
+        });
+
+        // Restore scroll position when page loads
+        window.addEventListener('load', function() {
+            const scrollPosition = localStorage.getItem('scrollPosition');
+            if (scrollPosition) {
+                window.scrollTo(0, parseFloat(scrollPosition));
+            }
+        });
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./image/coders_cafe_logo_.png" alt="Food Delivery Logo">
+        </div>
+        <div class="shop-name">
+            <h1>Coder's Cafe</h1>
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Cart</a>
+        </nav>
+    </header>
+    <main>
+        <div class="part-1">
+        <div class="hero">
+            <div class="hero-text">
+                <div class="delivery-method">
+                    <span class="tag">Bike Delivery</span>
+                    <img src="./image/Mask group.png" alt="Bike">
+                </div>
+                <h1>The Fastest <span>Delivery</span> in Your City</h1>
+                <p>Dedicated to <b>Coders</b> . We organize coding contest. top 3 gets discount</p>
+                <div class="buttons">
+                    <button class="order-now">Order Now</button>
+                    <button class="order-process">Order Process</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="food-item">
+                    <img src="./image/burger_sandwich_PNG4135 1.png" alt="Burger">
+                    <h3>Burger</h3>
+                    <p>Beef Burger with naga</p>
+                    <p class="price">199 TK</p>
+                </div>
+                <div class="food-item">
+                    <img src="./image/Combo-Junk-Food-PNG-Image 2.png" alt="Food Combo">
+                    <h3>Food Combo</h3>
+                    <p>Offer - Combo Pack</p>
+                    <p class="price">270 TK</p>
+                </div>
+                <div class="food-item">
+                    <img src="./image/pizza-png-12 1.png" alt="Pizza">
+                    <h3>Pizza</h3>
+                    <p>6" 8" 10" 12" available <br> starts from -</p>
+                    <p class="price">210 TK</p>
+                </div>
+                <div class="food-item">
+                    <img src="./image/purepng 1.png" alt="Cake">
+                    <h3>Cake</h3>
+                    <p>Chocolate Flavoured</p>
+                    <p class="price">550 TK</p>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+
+
+
+        <!-- <section class="centered-image">
+            <img src="center-image.png" alt="Centered Image">
+        </section> -->
+
+
+
+
+        <div class="most-popular-items">
+            <h2>Most Popular Items</h2>
+            <div class="products">
+                <div class="product-card">
+                    <img src="./image/item-1.png" alt="Gyro Sandwich">
+                    <div class="product-info">
+                        <h3>Gyro Sandwich</h3>
+                        <div class="rating-price">
+                            <span class="rating">★ 4.9</span>
+                            <span class="price">170 TK</span>
+                        </div>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="./image/item-2.png" alt="Enchilade">
+                    <div class="product-info">
+                        <h3>Enchilade</h3>
+                        <div class="rating-price">
+                            <span class="rating">★ 5.0</span>
+                            <span class="price">210 TK</span>
+                        </div>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="./image/item-3.png" alt="Green Beans">
+                    <div class="product-info">
+                        <h3>Green Beans</h3>
+                        <div class="rating-price">
+                            <span class="rating">★ 4.9</span>
+                            <span class="price">160 TK</span>
+                        </div>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="./image/item-4.png" alt="Pizza">
+                    <div class="product-info">
+                        <h3>Pizza</h3>
+                        <div class="rating-price">
+                            <span class="rating">★ 5.0</span>
+                            <span class="price">440 TK</span>
+                        </div>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="./image/item-5.png" alt="Chicken Pot Pie">
+                    <div class="product-info">
+                        <h3>Chicken Pot Pie</h3>
+                        <div class="rating-price">
+                            <span class="rating">★ 4.9</span>
+                            <span class="price">179 TK</span>
+                        </div>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="./image/item-6.png" alt="Green Salad">
+                    <div class="product-info">
+                        <h3>Green Salad</h3>
+                        <div class="rating-price">
+                            <span class="rating">★ 4.9</span>
+                            <span class="price">130 TK</span>
+                        </div>
+                        <button>Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            <button class="see-more" onclick="toggleMoreProducts()">See More Products</button>
+        </div>
+
+        <section class="why-choose-us">
+            <h2>Why Choose Our Favorite Food</h2>
+            <div class="services">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="./image/coders_cafe_logo_.png" alt="Quality Food">
+                    </div>
+                    <h3>Qualityfull Food</h3>
+                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="./image/Rectangle 16.png" alt="Healthy Food">
+                    </div>
+                    <h3>Healthy Food</h3>
+                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="./image/Mask group.png" alt="Fast Delivery">
+                    </div>
+                    <h3>Fast Delivery</h3>
+                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="testimonials">
+            <h2>Our Happy Client Says</h2>
+            <div class="testimonial-container">
+                <div class="testimonial-card">
+                    <button class="nav-button prev">
+                        <span>&#8592;</span>
+                    </button>
+                    <div class="testimonial-content">
+                        <div class="testimonial-text">
+                            <img src="./image/neta.jpg" alt="Client Photo" class="client-photo">
+                            <h3>Prince Mamun</h3>
+                            <p class="client-title">A regular client</p>
+                            <p class="testimonial-quote">“Of course this restaurant is recommended. They offer qualitiful foods with affordable price.”</p>
+                        </div>
+                    </div>
+                    <button class="nav-button next">
+                        <span>&#8594;</span>
+                    </button>
+                </div>
+                <div class="testimonial-image">
+                    <img src="./image/junk-food-transparent-background 1.png" alt="Food">
+                </div>
+            </div>
+        </section>
+
+
+        <!-- subscribe -->
+        <div class="newsletter-section">
+            <div class="burger-image">
+                <img src="./image/burger_sandwich_PNG4135 1.png" alt="Burger Image">
+            </div>
+            <div class="newsletter-content">
+                <h2>Subscribe To Our Newsletter</h2>
+                <p>To get of our latest update, please subscribe our portal</p>
+                <div class="newsletter-input">
+                    <input type="email" placeholder="Type your email...">
+                    <button type="submit">SUBSCRIBE</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- footer -->
+        <section class="contact-me">
+            <div class="contact-info">
+                <h2>Contact Me</h2>
+                <p>If you have any query about my our website, feel free to get in touch with us with any questions you may have!</p>
+                <br>
+                <p>Email: xxx@gmail.com</p>
+                <p>Phone: 01714-xxxxxx</p>
+            </div>
+            <div class="visit-us">
+                <h2>Visit My Our Place</h2>
+                <p>Mon-Thu 10:00am - 8:00pm<br>Friday 10:00am - 8:00pm<br>Saturday 10:00am - 7:00pm<br>Sunday 12:00pm - 5:00pm</p>
+                <br>
+                <p> <i> (--Above part is just a template--) </i></p>
+                <br>
+            </div>
+            <div class="contact-form">
+                <h2>Get in Touch</h2>
+                <form action="#" method="post">
+                    <input type="text" name="first_name" placeholder="First Name" required>
+                    <input type="text" name="last_name" placeholder="Last Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="text" name="phone" placeholder="Phone" required>
+                    <textarea name="message" placeholder="Type your message here..." required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+
+        <script src="./script.js"></script>
+    </main>
+    
+</body>
+</html>
